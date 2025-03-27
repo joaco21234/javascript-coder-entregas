@@ -53,7 +53,6 @@ function finalizarCompra() {
     alert(resumen);
 }
 
-// inica el simulador
 mostrarProductos();
 
 
