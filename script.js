@@ -29,7 +29,7 @@ function mostrarProductos() {
         case 4:
             return agregarAlCarrito(seleccion);
         default:
-            alert("Producto no encontrado. Intenta de nuevo.");
+            alert("Producto no encontrado.");
             return mostrarProductos();
     }
 }
@@ -39,13 +39,13 @@ function agregarAlCarrito(idProducto) {
     const producto = productos.find(p => p.id === idProducto);
     carrito.push(producto);
     total += producto.precio;
-    alert(`${producto.nombre} ha sido agregado a tu carrito. Total: $${total}`);
+    alert(`${producto.nombre} a sido agregado a tu carrito. Total: $${total}`);
     mostrarProductos();
 }
 
 // funcion para finalizar la compra
 function finalizarCompra() {
-    let resumen = carrito.length > 0 ? "Tu compra ha sido completada:\n" : "No has agregado productos al carrito.";
+    let resumen = carrito.length > 0 ? "Tu compra a sido completada:\n" : "No agregaste ningun producto.";
     carrito.forEach(producto => {
         resumen += `${producto.nombre} - $${producto.precio}\n`;
     });
