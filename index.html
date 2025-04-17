@@ -10,7 +10,7 @@
 <body>
     <h1>iGold</h1>
     <p>
-        📱 Bienvenido a iGold – Tu Tienda de iPhones de Confianza
+        📱 Bienvenido a iGold - Tu Tienda de iPhones de Confianza
         En iGold, somos apasionados por la tecnología y nos especializamos en ofrecerte los mejores iPhones al mejor precio.
         🔹 Precios imbatibles: Ofrecemos los mejores precios del mercado.
         🔹 Calidad garantizada: Todos nuestros dispositivos son originales y cuentan con garantía.
@@ -18,21 +18,42 @@
         💳 Pagos seguros | 🚚 Envíos rápidos | ✅ Garantía de satisfacción
     </p>
     <main>
+<!-- Botón del carrito -->
+<button id="cart-btn">🛒</button>
+
+<!-- Panel del carrito -->
+<div id="cart-panel" class="hidden">
+    <h2>Carrito</h2>
+
+    <div 
+        id="cart-items">
+    </div>
+
+    <div id="cart-total">Total: $0</div>
+
+    <button id="checkout-btn">Finalizar compra</button>
+    <button id="close-cart">Cerrar</button>
+    <button id="clear-cart-btn">Borrar todo</button>
+    <div id="mensaje-compra" class="mt-3 text-success fw-bold"></div>
+    <button id="volver-a-comprar" style="display: none;">🔁 Volver a comprar</button>
+
+</div>
+        <!-- cards -->
         <div class="iphones">
-            <div class="card" style="width: 16rem;">
-                <img src="img/iphone1.png" class="card-img-top" alt="imagen de producto">
-                <div class="card-body">
-                    <h5 class="card-title">Iphone xs</h5>
-                    <a href="#" class="btn btn-primary">Comprar</a>
-                    <a href="#" class="btn btn-primary">Ver</a>
-                    <a href="#" class="btn btn-primary">Info</a>
-                </div>
+        <div class="card" style="width: 16rem;">
+            <img src="img/iphone1.png" class="card-img-top" alt="imagen de producto">
+            <div class="card-body">
+                <h5 class="card-title">Iphone xs</h5>
+                <button class="btn btn-primary agregar-btn" data-nombre="Iphone xs" data-precio="310">Agregar</button>
+                <a href="#" class="btn btn-primary">Ver</a>
+                <a href="#" class="btn btn-primary">Info</a>
             </div>
+        </div>
             <div class="card" style="width: 16rem;">
                 <img src="img/iphone2.png" class="card-img-top" alt="imagen de producto">
                 <div class="card-body">
                     <h5 class="card-title">Iphone 8</h5>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button class="btn btn-primary agregar-btn" data-nombre="Iphone 8" data-precio="250">Agregar</button>
                     <a href="#" class="btn btn-primary">Ver</a>
                     <a href="#" class="btn btn-primary">Info</a>
                 </div>
@@ -41,7 +62,7 @@
                 <img src="img/iphone3.png" class="card-img-top" alt="imagen de producto">
                 <div class="card-body">
                     <h5 class="card-title">Iphone 16</h5>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button class="btn btn-primary agregar-btn" data-nombre="Iphone 16" data-precio="2400">Agregar</button>
                     <a href="#" class="btn btn-primary">Ver</a>
                     <a href="#" class="btn btn-primary">Info</a>
                 </div>
@@ -50,7 +71,7 @@
                 <img src="img/iphone4.png" class="card-img-top" alt="imagen de producto">
                 <div class="card-body">
                     <h5 class="card-title">Iphone 8 plus</h5>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button class="btn btn-primary agregar-btn" data-nombre="Iphone 8 plus" data-precio="290">Agregar</button>
                     <a href="#" class="btn btn-primary">Ver</a>
                     <a href="#" class="btn btn-primary">Info</a>
                 </div>
@@ -59,7 +80,7 @@
                 <img src="img/iphone5.png" class="card-img-top" alt="imagen de producto">
                 <div class="card-body">
                     <h5 class="card-title">Iphone 14 plus</h5>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button class="btn btn-primary agregar-btn" data-nombre="Iphone 14 plus data-precio="1400">Agregar</button>
                     <a href="#" class="btn btn-primary">Ver</a>
                     <a href="#" class="btn btn-primary">Info</a>
                 </div>
@@ -68,7 +89,7 @@
                 <img src="img/iphone6.png" class="card-img-top" alt="imagen de producto">
                 <div class="card-body">
                     <h5 class="card-title">Iphone 14</h5>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button class="btn btn-primary agregar-btn" data-nombre="Iphone 14" data-precio="1400">Agregar</button>
                     <a href="#" class="btn btn-primary">Ver</a>
                     <a href="#" class="btn btn-primary">Info</a>
                 </div>
@@ -77,7 +98,7 @@
                 <img src="img/iphone7.png" class="card-img-top" alt="imagen de producto">
                 <div class="card-body">
                     <h5 class="card-title">Iphone 11</h5>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button class="btn btn-primary agregar-btn" data-nombre="Iphone 11" data-precio="500">Agregar</button>
                     <a href="#" class="btn btn-primary">Ver</a>
                     <a href="#" class="btn btn-primary">Info</a>
                 </div>
@@ -86,7 +107,7 @@
                 <img src="img/iphone8.png" class="card-img-top" alt="imagen de producto">
                 <div class="card-body">
                     <h5 class="card-title">Iphone 12 pro</h5>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button class="btn btn-primary agregar-btn" data-nombre="Iphone 12 pro" data-precio="750">Agregar</button>
                     <a href="#" class="btn btn-primary">Ver</a>
                     <a href="#" class="btn btn-primary">Info</a>
                 </div>
@@ -95,7 +116,7 @@
                 <img src="img/iphone9.png" class="card-img-top" alt="imagen de producto">
                 <div class="card-body">
                     <h5 class="card-title">Iphone 11 pro</h5>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button class="btn btn-primary agregar-btn" data-nombre="Iphone 11 pro" data-precio="600">Agregar</button>
                     <a href="#" class="btn btn-primary">Ver</a>
                     <a href="#" class="btn btn-primary">Info</a>
                 </div>
@@ -104,12 +125,13 @@
                 <img src="img/iphone10.png" class="card-img-top" alt="imagen de producto">
                 <div class="card-body">
                     <h5 class="card-title">Iphone 13 pro</h5>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <button class="btn btn-primary agregar-btn" data-nombre="Iphone 13 pro" data-precio="1400">Agregar</button>
                     <a href="#" class="btn btn-primary">Ver</a>
                     <a href="#" class="btn btn-primary">Info</a>
                 </div>
             </div>
         </div>
+        <div id="noti" class="noti">¡Producto agregado al carrito!</div>
     </main>
 
 
